@@ -1,0 +1,5 @@
+.table-content-wrapper, .form-content-wrapper {
+    display: flex;
+    margin-top: 2rem;
+    padding: 1rem;
+}

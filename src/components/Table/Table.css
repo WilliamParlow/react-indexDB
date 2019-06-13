@@ -1,0 +1,30 @@
+.simple-table-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.simple-table thead th {
+    border-radius: 4px 4px 0 0;
+}
+
+.simple-table tbody tr:last-child td {
+    border-radius: 0 0 4px 4px;
+}
+.simple-table > thead th,
+.simple-table > tbody td {
+    padding: .5rem 1rem
+}
+
+.simple-table > thead th {
+    background: #333;
+    color: #EFEFEF;
+    border: solid #000
+}
+
+.simple-table > tbody td {
+    background: rgb(209, 209, 209);
+    color: #333;
+    border: solid 2px rgb(143, 143, 143);
+}

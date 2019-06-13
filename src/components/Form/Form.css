@@ -1,0 +1,34 @@
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.form input {
+    padding: .6rem;
+    margin: .3rem;
+    width: 100%;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    transition: .4s;
+    outline: none;
+}
+
+.form input:focus {
+    box-shadow: 0 0 5px rgb(109, 148, 253);
+    transition: .4s;
+}
+
+.form-bottom button {
+    padding: .6rem;
+    background:#009F00;
+    color: #FFF;
+    border: none;
+    margin: 1rem .3rem;
+    width: 100%;
+}
+
+.input-wrapper label {
+    display: block;
+    margin-left: .3rem;
+}
