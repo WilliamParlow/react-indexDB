@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import Table from '../components/Table/Table';
 import './TodoListTable.css';
 import Form from '../components/Form/Form';
 import Footer from '../components/Footer/Footer';
 import IndexDBService from '../services/IndexDBService';
-import { isTemplateElement } from '@babel/types';
+import { DatabaseConstant, TodoListTableConstant } from '../data/DataConstants';
 
 export class TodoListTable extends Component {
 
@@ -24,30 +24,24 @@ export class TodoListTable extends Component {
                 type: 'text'
             }
         ];
-        this.headitems = ['Task', 'Status'];
+        this.headitems = TodoListTableConstant.headitems;
+        this.todoListDatabaseConfig = DatabaseConstant.databases.find(d => d.name === 'todo-list');
+        this.todoListStoreConfig = this.todoListDatabaseConfig.stores.find(s => s.name === 'todo-iten');
         
         this.onSubmit = this.onSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
         this.onButtonClearDatabaseClick = this.onButtonClearDatabaseClick.bind(this);
 
-        this._dbService = new IndexDBService('todo-list', 1);
-        this._dbService.createNewStore('todo-iten', {
-            keyPath: 'id', 
-            autoIncrement: true
-        }, [{
-                name: 'task',
-                keyPath: 'task',
-                config: { unique: false }
-            },
-            {
-                name: 'status',
-                keyPath: 'status',
-                config: { unique: false }
-            }
-        ]).then(res => this._dbService.getAllFromStore('todo-iten')
-            .then(data => this.setState({...this.state, todoItens: this.state.todoItens.concat(data.map(iten => {
-                delete iten.id; return iten}
-                ))}))
+        this._dbService = new IndexDBService(this.todoListDatabaseConfig.name, 1);
+        this._dbService.createNewStore(this.todoListStoreConfig.name, this.todoListStoreConfig.config, this.todoListStoreConfig.fields)
+            .then(res => this._dbService.getAllFromStore(this.todoListStoreConfig.name)
+            .then(data => this.setState({
+                ...this.state, 
+                todoItens: this.state.todoItens.concat(data.map(iten => {
+                    delete iten.id; 
+                    return iten
+                }))
+            }))
             .catch(error => console.log(error)));
     }
 
@@ -57,7 +51,7 @@ export class TodoListTable extends Component {
         let status = 'Backlog';
         let task = event.target.task.value;
 
-        this._dbService.addNewFieldValue('todo-iten', {
+        this._dbService.addNewFieldValue(this.todoListStoreConfig.name, {
             task: task,
             status: status
         });
@@ -71,7 +65,7 @@ export class TodoListTable extends Component {
     }
 
     onButtonClearDatabaseClick() {
-        this._dbService.clearStore('todo-iten');
+        this._dbService.clearStore(this.todoListStoreConfig.name);
         this.setState({...this.state, todoItens: []})
     }
 

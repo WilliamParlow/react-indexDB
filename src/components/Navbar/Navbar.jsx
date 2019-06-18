@@ -6,7 +6,7 @@ export class Navbar extends Component {
         return (
             <nav className="navbar">
                 <div className="navbar-wrapper-item logo-wrapper">
-                    <h3 className="logo">Logo</h3>
+                    <h3 className="logo">My React APP</h3>
                 </div>
                 <div className="navbar-wrapper-item list-menu-itens-wrapper">
                     <ul className="navbar-list">

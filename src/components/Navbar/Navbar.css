@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     align-items: center;
-    background: #9F0000;
+    background: rgb(126, 0, 0);
     width: 100%;
     box-shadow: 0 2px 7px #000;
 }
@@ -20,6 +20,7 @@
 .navbar .logo {
     color: #FFF;
     padding: .4rem 0 .4rem 2rem;
+    text-shadow: 0 0 5px rgb(255, 230, 1);
 }
 
 .navbar-list > li {
@@ -30,6 +31,7 @@
     display: flex;
     align-self: stretch;
     align-items: center;
+    font-weight: bold;
 }
 
 .navbar-list > li:hover > a {
