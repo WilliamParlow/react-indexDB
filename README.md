@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-indexDB
+This project uses React with IndexDB connection to create an offline applicaton
 
 ## Available Scripts
 
