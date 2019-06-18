@@ -21,11 +21,12 @@
 
 .form-bottom button {
     padding: .6rem;
-    background:#009F00;
+    background:rgb(0, 95, 0);
     color: #FFF;
     border: none;
     margin: 1rem .3rem;
     width: 100%;
+    font-weight: bold;
 }
 
 .input-wrapper label {
