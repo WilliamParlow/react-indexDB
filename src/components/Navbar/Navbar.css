@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     align-items: center;
-    background: rgb(126, 0, 0);
+    background: rgb(0, 104, 23);
     width: 100%;
     box-shadow: 0 2px 7px #000;
 }
@@ -21,6 +21,11 @@
     color: #FFF;
     padding: .4rem 0 .4rem 2rem;
     text-shadow: 0 0 5px rgb(255, 230, 1);
+    cursor: default;
+}
+
+.navbar .logo::selection {
+    background: transparent;
 }
 
 .navbar-list > li {
@@ -39,6 +44,13 @@
     color: rgb(255, 160, 160);
 }
 
+.navbar-list > li:hover > a::after,
+.navbar-list > li:hover > a::before {
+    transition: ease-in-out .3s;
+    background: rgb(255, 160, 160);
+    height: 50%;
+}
+
 .navbar-list > li > a {
     transition: ease-in-out .3s;
     text-decoration: none;
@@ -49,4 +61,22 @@
     align-self: stretch;
     align-items: center;
     justify-content: center;
+}
+
+.navbar-list > li > a::after,
+.navbar-list > li > a::before {
+    position: relative;
+    height: 1rem;
+    width: 2px;
+    background: #FFF;
+    content: '';
+    transition: ease-in-out .3s;
+}
+
+.navbar-list > li > a::before {
+    margin-right: .4rem;
+}
+
+.navbar-list > li > a::after {
+    margin-left: .4rem;
 }

@@ -10,9 +10,9 @@ export class Navbar extends Component {
                 </div>
                 <div className="navbar-wrapper-item list-menu-itens-wrapper">
                     <ul className="navbar-list">
-                    <li><a href="#">Person</a></li>
-                        <li><a href="#">Car</a></li>
-                        <li><a href="#">Nothing</a></li>
+                    <li><a href="#">Todo List</a></li>
+                    <li><a href="#">Todo Calendar</a></li>
+                    <li><a href="#">Todo priority</a></li>
                     </ul>
                 </div>
             </nav>

@@ -91,6 +91,20 @@ export default class IndexDBService {
     
     /**
      * 
+     * Remove an item from IndexDB Store
+     *
+     * @param {String}      storeName       Name of Database store
+     * @param {String}      key             The key value from item of Database store to delete
+     * 
+     * @return {Promise} Return a Promise from indexDB operation
+     */
+    removeItemFromStoreByKey(storeName, key) {
+        return this._dbInstance.delete(storeName, key);
+    }
+
+
+    /**
+     * 
      * Clear all data from an IndexDB Store
      *
      * @param {String}      storeName       Name of Database store
@@ -99,5 +113,19 @@ export default class IndexDBService {
      */
     clearStore(storeName) {
         return this._dbInstance.clear(storeName);
+    }
+
+
+    /**
+     * 
+     * Clear all data from an IndexDB Store
+     *
+     * @param {String}      storeName           Name of Database store
+     * @param {String}      value               The new value to update
+     * @param {String}      key                 The key value from item of Database store to update
+     * @return {Promise} Return a Promise from indexDB operation
+     */
+    updateStoreIten(storeName, value, key) {
+        return this._dbInstance.update(storeName, value);
     }
 }

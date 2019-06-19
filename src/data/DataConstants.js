@@ -13,7 +13,7 @@ export const DatabaseConstant = {
                     {
                         name: 'task',
                         keyPath: 'task',
-                        config: { unique: false }
+                        config: { unique: true }
                     },
                     {
                         name: 'status',
@@ -29,4 +29,10 @@ export const DatabaseConstant = {
 
 export const TodoListTableConstant = {
     headitems: ['Task', 'Status']
+}
+
+export const TodoListStatus = {
+    backlog: 'Backlog',
+    doing: 'Doing',
+    done: 'Done'
 }
