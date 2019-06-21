@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
-import TodoListTable from './containers/TodoListTable';
+import TodoListTable from './containers/TodoListTable/TodoListTable';
 
 function App() {
   return (

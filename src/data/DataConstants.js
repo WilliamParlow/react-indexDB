@@ -4,7 +4,7 @@ export const DatabaseConstant = {
         version: 1,
         stores: [
             {
-                name: 'todo-iten',
+                name: 'todo-item',
                 config: {
                     keyPath: 'id', 
                     autoIncrement: true
