@@ -1,4 +1,4 @@
-import { ReactIndexedDB } from 'react-indexed-db';
+import { ReactIndexedDB } from 'react-indexed-db'
 
 export default class IndexDBService {
 
