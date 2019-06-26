@@ -88,7 +88,7 @@ export default class IndexDBService {
         return this._dbInstance.add(storeName, data);
     }
 
-    
+
     /**
      * 
      * Remove an item from IndexDB Store
