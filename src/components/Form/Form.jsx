@@ -12,7 +12,7 @@ const Form = props => (
                 </div>
             )}
             <div className="form-bottom">
-                <button type="submit">Submit</button>
+                <button type="submit" className="btn btn-success">Submit</button>
             </div>
         </form>
     </div>

@@ -19,14 +19,9 @@
     transition: .4s;
 }
 
-.form-bottom button {
-    padding: .6rem;
-    background:rgb(0, 95, 0);
-    color: #FFF;
-    border: none;
-    margin: 1rem .3rem;
-    width: 100%;
-    font-weight: bold;
+.form-bottom {
+    text-align: center;
+    padding: 1rem;
 }
 
 .input-wrapper label {

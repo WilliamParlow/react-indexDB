@@ -7,3 +7,51 @@ html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 }
+
+.btn {
+    border: 2px solid #333;
+    background: transparent;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    padding: 1ch 2ch;
+}
+
+.btn-danger {
+    background: rgb(231, 28, 28);
+    color: #FFF;
+}
+
+.btn-info {
+    background: rgb(83, 83, 253);
+    color: #FFF;
+}
+
+.btn-success {
+    background: rgb(42, 182, 42);
+    color: #FFF;
+}
+
+.btn-default {
+    background: rgb(134, 134, 134);
+    color: #FFF;
+}
+
+.btn:hover {
+    background: #AAA;
+}
+
+.btn.btn-danger:hover {
+    background: rgba(221, 22, 22, 0.6);
+}
+
+.btn.btn-info:hover {
+    background: rgba(54, 54, 255, 0.6);
+}
+
+.btn.btn-success:hover {
+    background: rgba(16, 153, 16, 0.6);
+}
+
+.btn.btn-default:hover {
+    background: rgba(100, 100, 100, 0.6);
+}

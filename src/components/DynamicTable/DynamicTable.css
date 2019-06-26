@@ -1,0 +1,22 @@
+.simple-table-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.simple-table>thead th, .simple-table>tbody td {
+    padding: .5rem 1rem
+}
+
+.simple-table>thead th {
+    background: rgb(17, 128, 76);
+    color: #EFEFEF;
+    border: 1px solid #000
+}
+
+.simple-table>tbody td {
+    background: rgb(209, 209, 209);
+    color: #333;
+    border: 1px solid rgb(143, 143, 143);
+}

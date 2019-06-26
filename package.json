@@ -5,7 +5,6 @@
   "dependencies": {
     "dateformat": "^3.0.3",
     "history": "^4.9.0",
-    "npm": "^6.9.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-indexed-db": "0.0.2",

@@ -8,10 +8,3 @@
 .clear-button-wrapper {
     text-align: center;
 }
-
-.clear-button-wrapper button {
-    padding: 0.6rem 1rem;
-    border: none;
-    background: #000;
-    color: #FFF;
-}
