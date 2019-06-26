@@ -1,0 +1,89 @@
+.calendar-container {
+    padding: 1rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template: repeat(8, 1fr);
+    grid-auto-rows: auto;
+    grid-auto-columns: 1fr;
+    width: 100%;
+    grid-gap: .5ch;
+}
+
+.calendar-header, .calendar-item {
+    box-shadow: 0 0 5px #000;
+    background: rgb(218, 255, 213);
+}
+
+.calendar-header {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    text-align: center;
+    padding: 1ch;
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-bottom: 1ch;
+}
+
+.calendar-item {
+    font-size: 80%;
+    min-height: 20ch;
+    max-height: 20ch;
+    transition: .3s;
+}
+
+.calendar-item:hover {
+    transition: .3s;
+    transform: scale(1.02);
+}
+
+.calendar-item-header {
+    background: #FFF;
+    padding: 1ch;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.calendar-item-data {
+    padding: 1ch;
+    min-height: 16ch;
+    max-height: 16ch;
+    overflow: auto;
+}
+
+.backlog {
+    background: rgb(161, 161, 161);
+    color: #FFF;
+}
+
+.doing {
+    background: rgb(114, 135, 255);
+    color: #FFF;
+}
+
+.done {
+    background: rgb(102, 219, 102);
+    color: #FFF;
+}
+
+.calendar-item-data::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 50px;
+}
+
+.calendar-item-data::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 50px;
+}
+
+.calendar-item-data::-webkit-scrollbar-thumb {
+    background: rgb(199, 199, 199);
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+}
+
+.calendar-item-data::-webkit-scrollbar-thumb:hover {
+    background: rgb(179, 179, 179);
+    transition: .3s ease-in-out;
+}
