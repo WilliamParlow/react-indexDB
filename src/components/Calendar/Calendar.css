@@ -76,6 +76,10 @@
         flex-direction: column;
     }
 
+    .calendar-container {
+        padding: .3rem;
+    }
+
     .calendar-grid .calendar-item {
         display: flex;
         flex-direction: column;

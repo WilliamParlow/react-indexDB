@@ -85,3 +85,11 @@ html, body {
     background: rgb(179, 179, 179);
     transition: .3s ease-in-out;
 }
+
+@media screen and (max-width: 768px) {
+
+    .app-content-container {
+        width: 100%;
+        padding: .3rem;
+    }
+}
