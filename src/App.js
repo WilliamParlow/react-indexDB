@@ -12,11 +12,15 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <div className="app-content-wrapper">
-          <Switch>
-            <Route path="/" exact component={TodoListTable} />
-            <Route path="/todo-calendar" component={TodoCalendar} />
-            <Route path="/todo-priority" component={TodoPriority} />
-          </Switch>
+          <div className="app-content-container">
+            <div className="app-content">
+            <Switch>
+              <Route path="/" exact component={TodoListTable} />
+              <Route path="/todo-calendar" component={TodoCalendar} />
+              <Route path="/todo-priority" component={TodoPriority} />
+            </Switch>
+            </div>
+          </div>
           <div className="footer-content-wrapper" >
               <Footer description="There is a React project by @Will to use like a model for comparision with 
                   another project using React and Redux"/>

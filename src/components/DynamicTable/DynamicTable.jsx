@@ -2,8 +2,8 @@ import React from 'react'
 import './DynamicTable.css'
 
 const DynamicTable = props => (
-    <div className="simple-table-wrapper">
-        <table className="simple-table">
+    <div className="dynamic-table-wrapper">
+        <table className="dynamic-table">
             <caption>{props.caption}</caption>
             <thead>
                 <tr>

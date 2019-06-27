@@ -132,10 +132,7 @@ export class TodoListTable extends Component {
         return (
             <div>
                 <div className="form-content-wrapper">
-                    <Form formId='form-test' inputs={this.inputs} onSubmit={this.onSubmit} onChange={this.onChange} />
-                    <div className="clear-button-wrapper">
-                        <button onClick={this.onButtonClearDatabaseClick} className="btn">Clear</button>
-                    </div>
+                    <Form formId='form-test' inputs={this.inputs} onSubmit={this.onSubmit} onChange={this.onChange} onClick={this.onButtonClearDatabaseClick}/>
                 </div>
 
                 <div className="table-content-wrapper" >

@@ -1,10 +1,5 @@
 .table-content-wrapper, .form-content-wrapper {
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
     padding: 1rem;
-}
-
-.clear-button-wrapper {
-    text-align: center;
 }

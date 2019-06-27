@@ -31,6 +31,7 @@
     min-height: 20ch;
     max-height: 20ch;
     transition: .3s;
+    max-width: calc(100vw / 8);
 }
 
 .calendar-item:hover {
@@ -50,6 +51,7 @@
     min-height: 16ch;
     max-height: 16ch;
     overflow: auto;
+    word-wrap: wrap;
 }
 
 .backlog {
@@ -67,23 +69,18 @@
     color: #FFF;
 }
 
-.calendar-item-data::-webkit-scrollbar {
-    width: 6px;
-    border-radius: 50px;
-}
+@media screen and (max-width: 768px) {
+    
+    .calendar-grid {
+        display: flex;
+        flex-direction: column;
+    }
 
-.calendar-item-data::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 50px;
-}
-
-.calendar-item-data::-webkit-scrollbar-thumb {
-    background: rgb(199, 199, 199);
-    border-radius: 50px;
-    transition: .3s ease-in-out;
-}
-
-.calendar-item-data::-webkit-scrollbar-thumb:hover {
-    background: rgb(179, 179, 179);
-    transition: .3s ease-in-out;
+    .calendar-grid .calendar-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: none;
+        margin-bottom: 2ch;
+    }
 }

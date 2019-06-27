@@ -55,3 +55,33 @@ html, body {
 .btn.btn-default:hover {
     background: rgba(100, 100, 100, 0.6);
 }
+
+.app-content-container {
+    padding: 1rem;
+}
+
+.calendar-item-data::-webkit-scrollbar,
+.dynamic-table>tbody td::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 50px;
+    height: 6px;
+}
+
+.calendar-item-data::-webkit-scrollbar-track,
+.dynamic-table>tbody td::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 50px;
+}
+
+.calendar-item-data::-webkit-scrollbar-thumb,
+.dynamic-table>tbody td::-webkit-scrollbar-thumb {
+    background: rgb(199, 199, 199);
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+}
+
+.calendar-item-data::-webkit-scrollbar-thumb:hover,
+.dynamic-table>tbody td::-webkit-scrollbar-thumb:hover {
+    background: rgb(179, 179, 179);
+    transition: .3s ease-in-out;
+}
