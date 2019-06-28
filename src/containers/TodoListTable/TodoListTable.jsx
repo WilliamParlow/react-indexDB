@@ -13,7 +13,7 @@ export class TodoListTable extends Component {
 
         this.state = {
             task: '',
-            date: dateFormat(new Date(), 'yyyy-mm-dd', false, false),
+            date: dateFormat(new Date(), 'yyyy-mm-dd', true),
             todoItens: [],
             doingItens: [],
             doneItens: []
@@ -57,9 +57,8 @@ export class TodoListTable extends Component {
 
         let status = TodoListStatus.backlog;
         let task = event.target.task.value;
-        let day = parseInt(dateFormat(event.target.date.value, 'd', false, false)) + 1;
-        day = (day <= 9) ? `0${day}` : day;
-        let date = dateFormat(event.target.date.value, 'yyyy-mm-', false, false).concat(day);
+        let day = parseInt(dateFormat(event.target.date.value, 'd', true));
+        let date = dateFormat(event.target.date.value, 'yyyy-mm-', true).concat(day);
 
         this._dbService.addNewFieldValue(this.todoListStoreConfig.name, {
             task: task,
@@ -132,7 +131,7 @@ export class TodoListTable extends Component {
         return (
             <div>
                 <div className="form-content-wrapper">
-                    <Form formId='form' inputs={this.inputs} onSubmit={this.onSubmit} onChange={this.onChange} onClick={this.onButtonClearDatabaseClick}/>
+                    <Form formId='form' inputs={this.inputs} onSubmit={this.onSubmit} onChange={this.onChange} onClick={this.onButtonClearDatabaseClick} />
                 </div>
 
                 <div className="table-content-wrapper" >

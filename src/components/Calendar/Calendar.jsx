@@ -1,5 +1,7 @@
 import React from 'react'
 import dateformat from 'dateformat'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import './Calendar.css'
 
 const Calendar = props => {
@@ -10,7 +12,19 @@ const Calendar = props => {
         <div className="calendar-container">
             <div className="calendar-grid">
                 <div className="calendar-header">
-                    Calendar: {date.getFullYear()} - {date.getMonth() + 1}
+                    <div className="calendar-header-item">
+                        <button className="btn btn-info" onClick={e => props.onCalendarPagination(e, 'left')}>
+                            <FontAwesomeIcon icon={faAngleLeft} />
+                        </button>
+                    </div>
+                    <div className="calendar-header-item">
+                        Calendar: {date.getFullYear()} - {date.toString().substring(4, 7)}
+                    </div>
+                    <div className="calendar-header-item">
+                        <button className="btn btn-info" onClick={e => props.onCalendarPagination(e, 'right')}>
+                            <FontAwesomeIcon icon={faAngleRight} />
+                        </button>
+                    </div>
                 </div>
                 {
                     monthDays.map(day =>
@@ -31,16 +45,20 @@ const Calendar = props => {
 
 export function getCalendarData(date, todoData) {
 
-    let totalMonthDays = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
+    let totalMonthDays = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
     let calendarData = [];
 
     for (let i = 1; i <= totalMonthDays; i++) {
         calendarData.push({
             nowDay: i,
-            todoData: todoData.find(d => parseInt(dateformat(d.date, 'd', false, false)) === i)
+            todoData: todoData.find(d => {
+                console.log(`${dateformat(d.date, 'yyyy', true)}-${dateformat(d.date, 'm', true)}-${dateformat(d.date, 'd', true)}`, ' | ' , `${date.getFullYear()}-${date.getMonth() + 1}-${i}`);
+                return parseInt(dateformat(d.date, 'd', true)) === i
+                    && parseInt(dateformat(d.date, 'm', true)) === (date.getMonth() + 1)
+                    && parseInt(dateformat(d.date, 'yyyy', true)) === date.getFullYear()
+            })
         });
     }
-
     return calendarData;
 }
 

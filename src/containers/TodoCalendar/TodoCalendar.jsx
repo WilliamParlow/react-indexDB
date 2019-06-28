@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
-import './TodoCalendar.css'
 import IndexDBService from '../../services/IndexDBService'
 import Calendar from '../../components/Calendar/Calendar';
 import { DatabaseConstant } from '../../data/DataConstants';
+import dateformat from 'dateformat'
+import './TodoCalendar.css'
 
 export class TodoCalendar extends Component {
     constructor() {
         super();
 
         this.state = {
-            todoData: []
+            todoData: [],
+            calendarDate: new Date()
         }
 
         this.todoListDatabaseConfig = DatabaseConstant.databases.find(d => d.name === 'todo-list');
@@ -24,14 +26,35 @@ export class TodoCalendar extends Component {
                         let todoDate = new Date(data.date);
                         return (nowDate.getMonth()) === todoDate.getMonth();
                     })
-                    this.setState({...this.state, todoData: newData});
+                    this.setState({ ...this.state, todoData: newData });
                 })).catch(e => console.log(e));
+
+        this.onCalendarPagination = this.onCalendarPagination.bind(this);
+    }
+
+    onCalendarPagination(event, pagination) {
+
+        const date = (pagination === 'left')
+            ? new Date(this.state.calendarDate.getFullYear(), this.state.calendarDate.getMonth() - 1, this.state.calendarDate.getDate())
+            : new Date(this.state.calendarDate.getFullYear(), this.state.calendarDate.getMonth() + 1, this.state.calendarDate.getDate());
+
+        this._dbService.getAllFromStore(this.todoListStoreConfig.name).then(todoListData => {
+            let newData = todoListData.filter(data => {
+                return parseInt(dateformat(data.date, 'm', true)) === (date.getMonth() + 1)
+                    && parseInt(dateformat(data.date, 'yyyy', true)) === date.getFullYear();
+            })
+            this.setState({
+                ...this.state,
+                todoData: newData,
+                calendarDate: date
+            });
+        })
     }
 
     render() {
         return (
             <div>
-                <Calendar period={new Date()} todoData={this.state.todoData}/>
+                <Calendar period={this.state.calendarDate} todoData={this.state.todoData} onCalendarPagination={this.onCalendarPagination} />
             </div>
         )
     }
