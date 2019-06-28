@@ -1,96 +1,98 @@
+@import "../../palette.scss";
+
 .calendar-container {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .calendar-grid {
-    display: grid;
-    grid-template: repeat(8, 1fr);
-    grid-auto-rows: auto;
-    grid-auto-columns: 1fr;
-    width: 100%;
-    grid-gap: .5ch;
+  display: grid;
+  grid-template: repeat(8, 1fr);
+  grid-auto-rows: auto;
+  grid-auto-columns: 1fr;
+  width: 100%;
+  grid-gap: 0.5ch;
 }
 
-.calendar-header, .calendar-item {
-    box-shadow: 0 0 5px #000;
-    background: rgb(218, 255, 213);
-}
-
-.calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.calendar-header,
+.calendar-item {
+  box-shadow: 0 0 5px #000;
+  background: $theme-color2;
 }
 
 .calendar-header {
-    grid-column-start: 1;
-    grid-column-end: 9;
-    text-align: center;
-    padding: 1ch;
-    font-weight: bold;
-    font-size: 1.6rem;
-    margin-bottom: 1ch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-header {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  text-align: center;
+  padding: 1ch;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 1ch;
 }
 
 .calendar-item {
-    font-size: 80%;
-    min-height: 20ch;
-    max-height: 20ch;
-    transition: .3s;
-    max-width: calc(100vw / 8);
+  font-size: 80%;
+  min-height: 20ch;
+  max-height: 20ch;
+  transition: 0.3s;
+  max-width: calc(100vw / 8);
 }
 
 .calendar-item:hover {
-    transition: .3s;
-    transform: scale(1.02);
+  transition: 0.3s;
+  transform: scale(1.02);
 }
 
 .calendar-item-header {
-    background: #FFF;
-    padding: 1ch;
-    font-size: 90%;
-    font-weight: bold;
+  background: #fff;
+  padding: 1ch;
+  font-size: 90%;
+  font-weight: bold;
 }
 
 .calendar-item-data {
-    padding: 1ch;
-    min-height: 16ch;
-    max-height: 16ch;
-    overflow: auto;
-    word-wrap: wrap;
+  padding: 1ch;
+  min-height: 16ch;
+  max-height: 16ch;
+  overflow: auto;
+  word-wrap: wrap;
 }
 
 .backlog {
-    background: rgb(161, 161, 161);
-    color: #FFF;
+  background: $theme-color1;
+  color: #fff;
 }
 
 .doing {
-    background: rgb(114, 135, 255);
-    color: #FFF;
+  background: $theme-color-info-dark;
+  color: #fff;
 }
 
 .done {
-    background: rgb(102, 219, 102);
-    color: #FFF;
+  background: $theme-color-success-dark;
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
-    
-    .calendar-grid {
-        display: flex;
-        flex-direction: column;
-    }
+  .calendar-grid {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .calendar-container {
-        padding: .3rem;
-    }
+  .calendar-container {
+    padding: 0.3rem;
+  }
 
-    .calendar-grid .calendar-item {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: none;
-        margin-bottom: 2ch;
-    }
+  .calendar-grid .calendar-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 2ch;
+  }
 }

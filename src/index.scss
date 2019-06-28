@@ -1,95 +1,97 @@
-html, body {
-    margin: 0;
-    padding: 0;
+@import "../src/palette.scss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
 .btn {
-    border: 2px solid #333;
-    background: transparent;
-    transition: .3s ease-in-out;
-    cursor: pointer;
-    padding: 1ch 2ch;
+  border: 2px solid #333;
+  background: transparent;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  padding: 1ch 2ch;
 }
 
 .btn-danger {
-    background: rgb(231, 28, 28);
-    color: #FFF;
+  background: $theme-color-danger;
+  color: $theme-color1;
 }
 
 .btn-info {
-    background: rgb(83, 83, 253);
-    color: #FFF;
+  background: $theme-color-info;
+  color: $theme-color1;
 }
 
 .btn-success {
-    background: rgb(42, 182, 42);
-    color: #FFF;
+  background: $theme-color-success;
+  color: $theme-color1;
 }
 
 .btn-default {
-    background: rgb(134, 134, 134);
-    color: #FFF;
+  background: $theme-color-default;
+  color: $theme-color1;
 }
 
 .btn:hover {
-    background: #AAA;
+  background: rgb(233, 233, 233);
 }
 
 .btn.btn-danger:hover {
-    background: rgba(221, 22, 22, 0.6);
+  background: $theme-color-danger-transparent-dark;
 }
 
 .btn.btn-info:hover {
-    background: rgba(54, 54, 255, 0.6);
+  background: $theme-color-info-transparent-dark;
 }
 
 .btn.btn-success:hover {
-    background: rgba(16, 153, 16, 0.6);
+  background: $theme-color-success-transparent-dark;
 }
 
 .btn.btn-default:hover {
-    background: rgba(100, 100, 100, 0.6);
+  background: $theme-color-default-transparent-dark;
 }
 
 .app-content-container {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .calendar-item-data::-webkit-scrollbar,
-.dynamic-table>tbody td::-webkit-scrollbar {
-    width: 6px;
-    border-radius: 50px;
-    height: 6px;
+.dynamic-table > tbody td::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 50px;
+  height: 6px;
 }
 
 .calendar-item-data::-webkit-scrollbar-track,
-.dynamic-table>tbody td::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 50px;
+.dynamic-table > tbody td::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 50px;
 }
 
 .calendar-item-data::-webkit-scrollbar-thumb,
-.dynamic-table>tbody td::-webkit-scrollbar-thumb {
-    background: rgb(199, 199, 199);
-    border-radius: 50px;
-    transition: .3s ease-in-out;
+.dynamic-table > tbody td::-webkit-scrollbar-thumb {
+  background: rgb(199, 199, 199);
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
 }
 
 .calendar-item-data::-webkit-scrollbar-thumb:hover,
-.dynamic-table>tbody td::-webkit-scrollbar-thumb:hover {
-    background: rgb(179, 179, 179);
-    transition: .3s ease-in-out;
+.dynamic-table > tbody td::-webkit-scrollbar-thumb:hover {
+  background: rgb(179, 179, 179);
+  transition: 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
-
-    .app-content-container {
-        width: 100%;
-        padding: .3rem;
-    }
+  .app-content-container {
+    width: 100%;
+    padding: 0.3rem;
+  }
 }

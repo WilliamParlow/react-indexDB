@@ -1,24 +1,27 @@
+@import "../../palette.scss";
+
 .dynamic-table-wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
-.dynamic-table>thead th, .dynamic-table>tbody td {
-    padding: .5rem 1rem;
-    max-width: calc(100vw / 4);
-    word-break: break-word;
+.dynamic-table > thead th,
+.dynamic-table > tbody td {
+  padding: 0.5rem 1rem;
+  max-width: calc(100vw / 4);
+  word-break: break-word;
 }
 
-.dynamic-table>thead th {
-    background: rgb(17, 128, 76);
-    color: #EFEFEF;
-    border: 1px solid #000;
+.dynamic-table > thead th {
+  background: $theme-color5;
+  color: $theme-color1;
+  border: 1px solid #000;
 }
 
-.dynamic-table>tbody td {
-    background: rgb(209, 209, 209);
-    color: #333;
-    border: 1px solid rgb(143, 143, 143);
+.dynamic-table > tbody td {
+  background: $theme-color2;
+  color: #333;
+  border: 1px solid rgb(143, 143, 143);
 }

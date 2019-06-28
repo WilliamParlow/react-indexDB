@@ -1,82 +1,84 @@
+@import "../../palette.scss";
+
 .navbar {
-    display: flex;
-    align-items: center;
-    background: rgb(0, 104, 23);
-    width: 100%;
-    box-shadow: 0 2px 7px #000;
+  display: flex;
+  align-items: center;
+  background: $theme-color3;
+  width: 100%;
+  box-shadow: 0 2px 7px -4px #000;
 }
 
 .navbar-wrapper-item {
-    display: flex;
-    align-self: stretch;
+  display: flex;
+  align-self: stretch;
 }
 
 .navbar-list {
-    display: flex;
-    align-self: stretch;
-    margin: 0;
+  display: flex;
+  align-self: stretch;
+  margin: 0;
 }
 
 .navbar .logo {
-    color: #FFF;
-    padding: .4rem 0 .4rem 2rem;
-    text-shadow: 0 0 5px rgb(255, 230, 1);
-    cursor: default;
+  color: $theme-color2;
+  padding: 0.4rem 0 0.4rem 2rem;
+  text-shadow: 0 0 5px $theme-color4;
+  cursor: default;
 }
 
 .navbar .logo::selection {
-    background: transparent;
+  background: transparent;
 }
 
 .navbar-list > li {
-    color: #FFF;
-    list-style-type: none;
-    padding: .3rem;
-    float: left;
-    display: flex;
-    align-self: stretch;
-    align-items: center;
-    font-weight: bold;
+  color: #fff;
+  list-style-type: none;
+  padding: 0.3rem;
+  float: left;
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  font-weight: bold;
 }
 
 .navbar-list > li:hover > a {
-    transition: ease-in-out .3s;
-    color: rgb(255, 160, 160);
+  transition: ease-in-out 0.3s;
+  color: $theme-color5;
 }
 
 .navbar-list > li:hover > a::after,
 .navbar-list > li:hover > a::before {
-    transition: ease-in-out .3s;
-    background: rgb(255, 160, 160);
-    height: 50%;
+  transition: ease-in-out 0.3s;
+  background: $theme-color5;
+  height: 50%;
 }
 
 .navbar-list > li > a {
-    transition: ease-in-out .3s;
-    text-decoration: none;
-    color: #FFF;
-    text-align: center;
-    min-width: 50px;
-    display: flex;
-    align-self: stretch;
-    align-items: center;
-    justify-content: center;
+  transition: ease-in-out 0.3s;
+  text-decoration: none;
+  color: $theme-color2;
+  text-align: center;
+  min-width: 50px;
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar-list > li > a::after,
 .navbar-list > li > a::before {
-    position: relative;
-    height: 1rem;
-    width: 2px;
-    background: #FFF;
-    content: '';
-    transition: ease-in-out .3s;
+  position: relative;
+  height: 1rem;
+  width: 2px;
+  background: $theme-color2;
+  content: "";
+  transition: ease-in-out 0.3s;
 }
 
 .navbar-list > li > a::before {
-    margin-right: .4rem;
+  margin-right: 0.4rem;
 }
 
 .navbar-list > li > a::after {
-    margin-left: .4rem;
+  margin-left: 0.4rem;
 }

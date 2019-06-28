@@ -9,13 +9,19 @@ $theme-color5: rgba(214, 229, 227, 1);
 $theme-color6: rgb(255, 160, 160);
 
 /*
- * Buttons theme
+ * Others themes
 */
-$btn-danger: rgb(231, 28, 28);
-$btn-info: rgb(83, 83, 253);
-$btn-success: rgb(42, 182, 42);
-$btn-default: rgb(134, 134, 134);
-$btn-danger-hover: rgba(221, 22, 22, 0.6);
-$btn-info-hover: rgba(54, 54, 255, 0.6);
-$btn-success-hover: rgba(16, 153, 16, 0.6);
-$btn-default-hover: rgba(100, 100, 100, 0.6);
+$theme-color-danger: rgb(240, 116, 116);
+$theme-color-info: rgb(170, 170, 238);
+$theme-color-success: rgb(140, 221, 140);
+$theme-color-default: rgb(179, 179, 179);
+
+$theme-color-danger-transparent-dark: rgba(221, 22, 22, 0.6);
+$theme-color-info-transparent-dark: rgba(117, 117, 255, 0.6);
+$theme-color-success-transparent-dark: rgba(49, 204, 49, 0.6);
+$theme-color-default-transparent-dark: rgba(122, 122, 122, 0.6);
+
+$theme-color-danger-dark: rgb(110, 38, 38);
+$theme-color-info-dark: rgb(72, 72, 105);
+$theme-color-success-dark: rgb(67, 107, 67);
+$theme-color-default-dark: rgb(78, 78, 78);

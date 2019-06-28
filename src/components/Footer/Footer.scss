@@ -1,12 +1,13 @@
+@import "../../palette.scss";
+
 .footer-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem .5rem;
-    background: rgb(0, 104, 23);
-    color: #FFF;
-    font-weight: bold;
-    align-self: stretch;
-    width: 100%;
-    box-shadow: 0 -2px 7px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  background: $theme-color3;
+  color: $theme-color2;
+  font-weight: bold;
+  align-self: stretch;
+  width: 100%;
 }

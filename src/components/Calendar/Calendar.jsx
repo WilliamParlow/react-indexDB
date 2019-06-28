@@ -13,7 +13,7 @@ const Calendar = props => {
             <div className="calendar-grid">
                 <div className="calendar-header">
                     <div className="calendar-header-item">
-                        <button className="btn btn-info" onClick={e => props.onCalendarPagination(e, 'left')}>
+                        <button className="btn" onClick={e => props.onCalendarPagination(e, 'left')}>
                             <FontAwesomeIcon icon={faAngleLeft} />
                         </button>
                     </div>
@@ -21,7 +21,7 @@ const Calendar = props => {
                         Calendar: {date.getFullYear()} - {date.toString().substring(4, 7)}
                     </div>
                     <div className="calendar-header-item">
-                        <button className="btn btn-info" onClick={e => props.onCalendarPagination(e, 'right')}>
+                        <button className="btn" onClick={e => props.onCalendarPagination(e, 'right')}>
                             <FontAwesomeIcon icon={faAngleRight} />
                         </button>
                     </div>
@@ -43,7 +43,7 @@ const Calendar = props => {
     )
 }
 
-export function getCalendarData(date, todoData) {
+function getCalendarData(date, todoData) {
 
     let totalMonthDays = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
     let calendarData = [];
