@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './TodoPriority.css'
+import './TodoPriority.scss'
 
 export class TodoPriority extends Component {
     render() {

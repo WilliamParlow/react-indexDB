@@ -2,7 +2,7 @@ import React from 'react'
 import dateformat from 'dateformat'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
-import './Calendar.css'
+import './Calendar.scss'
 
 const Calendar = props => {
     let date = new Date(props.period);

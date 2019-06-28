@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import dateFormat from 'dateformat'
 import DynamicTable from '../../components/DynamicTable/DynamicTable'
-import './TodoListTable.css'
+import './TodoListTable.scss'
 import Form from '../../components/Form/Form'
 import IndexDBService from '../../services/IndexDBService'
 import { DatabaseConstant, TodoListTableConstant, TodoListStatus } from '../../data/DataConstants'

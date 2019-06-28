@@ -3,7 +3,7 @@ import IndexDBService from '../../services/IndexDBService'
 import Calendar from '../../components/Calendar/Calendar';
 import { DatabaseConstant } from '../../data/DataConstants';
 import dateformat from 'dateformat'
-import './TodoCalendar.css'
+import './TodoCalendar.scss'
 
 export class TodoCalendar extends Component {
     constructor() {
