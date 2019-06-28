@@ -1,5 +1,21 @@
-$color1: rgba(54, 65, 62, 1);
-$color2: rgba(255, 225, 198, 1);
-$color3: rgba(75, 78, 109, 1);
-$color4: rgba(202, 207, 214, 1);
-$color5: rgba(214, 229, 227, 1);
+/* 
+ * Application main theme
+*/
+$theme-color1: rgba(54, 65, 62, 1);
+$theme-color2: rgba(255, 225, 198, 1);
+$theme-color3: rgba(75, 78, 109, 1);
+$theme-color4: rgba(202, 207, 214, 1);
+$theme-color5: rgba(214, 229, 227, 1);
+$theme-color6: rgb(255, 160, 160);
+
+/*
+ * Buttons theme
+*/
+$btn-danger: rgb(231, 28, 28);
+$btn-info: rgb(83, 83, 253);
+$btn-success: rgb(42, 182, 42);
+$btn-default: rgb(134, 134, 134);
+$btn-danger-hover: rgba(221, 22, 22, 0.6);
+$btn-info-hover: rgba(54, 54, 255, 0.6);
+$btn-success-hover: rgba(16, 153, 16, 0.6);
+$btn-default-hover: rgba(100, 100, 100, 0.6);
