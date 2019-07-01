@@ -46,6 +46,8 @@ export class TodoListTable extends Component {
         this.changeStatusToDoing = this.changeStatusToDoing.bind(this);
         this.changeStatusToDone = this.changeStatusToDone.bind(this);
         this.changeStatusToTodo = this.changeStatusToTodo.bind(this);
+        this.onDateInputKeyUp = this.onDateInputKeyUp.bind(this);
+        this.onDateInputChange = this.onDateInputChange.bind(this);
 
         this._dbService = new IndexDBService(this.todoListDatabaseConfig.name, 1);
         this._dbService.createNewStore(this.todoListStoreConfig.name, this.todoListStoreConfig.config, this.todoListStoreConfig.fields)
@@ -76,6 +78,16 @@ export class TodoListTable extends Component {
                 console.log(err);
                 alert('You can\'t create a Task with same name you already created.');
             });
+    }
+
+    onDateInputKeyUp(e, todoData) {
+        console.log(e.keyCode)
+        if (e.keyCode === 13)
+            console.log('submit!', todoData);
+    }
+
+    onDateInputChange(e) {
+        console.log(e.target.value);
     }
 
     onChange(event) {
@@ -136,18 +148,20 @@ export class TodoListTable extends Component {
 
                 <div className="table-content-wrapper" >
                     <DynamicTable caption="Todo itens" headitems={TodoListTableConstant.headitems} bodyitems={this.state.todoItens}
-                        onRemove={this.onRemoveTodoItem} changeStatusToDoing={this.changeStatusToDoing} />
+                        onRemove={this.onRemoveTodoItem} changeStatusToDoing={this.changeStatusToDoing} customClass={'table-todo'}
+                        onDateInputKeyUp={this.onDateInputKeyUp} onDateInputChange={this.onDateInputChange} />
                 </div>
 
                 <div className="table-content-wrapper" >
                     <DynamicTable caption="Doing itens" headitems={TodoListTableConstant.headitems} bodyitems={this.state.doingItens}
                         onRemove={this.onRemoveTodoItem} changeStatusToDone={this.changeStatusToDone}
-                        changeStatusToTodo={this.changeStatusToTodo} />
+                        changeStatusToTodo={this.changeStatusToTodo} customClass={'table-doing'} onDateInputKeyUp={this.onDateInputKeyUp} onDateInputChange={this.onDateInputChange} />
                 </div>
 
                 <div className="table-content-wrapper" >
                     <DynamicTable caption="Done itens" headitems={TodoListTableConstant.headitems} bodyitems={this.state.doneItens}
-                        onRemove={this.onRemoveTodoItem} changeStatusToDoing={this.changeStatusToDoing} />
+                        onRemove={this.onRemoveTodoItem} changeStatusToDoing={this.changeStatusToDoing} customClass={'table-done'}
+                        onDateInputKeyUp={this.onDateInputKeyUp} onDateInputChange={this.onDateInputChange} />
                 </div>
             </div>
         );
