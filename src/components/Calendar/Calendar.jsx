@@ -34,7 +34,7 @@ const Calendar = props => {
                             </div>
                             <div className={"calendar-item-data"}>
                                 {day.todoData.sort((d1, d2) => (d1.status > d2.status) ? 1 : -1).map(d =>
-                                    <div className={`todo-item ${(d.status) ? d.status.toLowerCase() : ''}`}>
+                                    <div key={d.task} className={`todo-item ${(d.status) ? d.status.toLowerCase() : ''}`}>
                                         <span>
                                             {
                                                 (d.status === 'Backlog') ? <FontAwesomeIcon icon={faListUl} /> : null

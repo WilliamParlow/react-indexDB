@@ -12,6 +12,7 @@
   padding: 0.3rem .6rem;
   text-align: center;
   white-space: nowrap;
+  border-radius: 10px;
 }
 
 .dynamic-table > tbody td:first-child {
@@ -23,17 +24,19 @@
 .dynamic-table > thead th {
   background: $theme-color5;
   color: $theme-color1;
-  border: 1px solid #000;
 }
 
 .dynamic-table > tbody td {
-  background: $theme-color2;
+  background: $theme-color7;
   color: #333;
-  border: 1px solid rgb(143, 143, 143);
 }
 
 .dynamic-table > tbody td > button {
   color: $theme-color1;
+}
+
+.dynamic-table tbody tr td:last-child button {
+  margin: 0.1rem;
 }
 
 .dynamic-table {

@@ -12,7 +12,9 @@ body {
 }
 
 .btn {
-  border: 2px solid #333;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px -2px #000;
   background: transparent;
   transition: 0.3s ease-in-out;
   cursor: pointer;
@@ -22,21 +24,29 @@ body {
 .btn-danger {
   background: $theme-color-danger;
   color: $theme-color1;
+  border: none;
+  box-shadow: 0 0 5px -2px #000;
 }
 
 .btn-info {
   background: $theme-color-info;
   color: $theme-color1;
+  border: none;
+  box-shadow: 0 0 5px -2px #000;
 }
 
 .btn-success {
   background: $theme-color-success;
   color: $theme-color1;
+  border: none;
+  box-shadow: 0 0 5px -2px #000;
 }
 
 .btn-default {
   background: $theme-color-default;
   color: $theme-color1;
+  border: none;
+  box-shadow: 0 0 5px -2px #000;
 }
 
 .btn:hover {
