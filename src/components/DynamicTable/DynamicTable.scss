@@ -2,17 +2,22 @@
 
 .dynamic-table-wrapper {
   margin: auto;
-  width: 50%;
-  max-width: 100%;
+  width: 70%;
+  max-width: 100vw;
+  max-height: 300px;
   overflow: auto;
 }
 
 .dynamic-table > thead th,
 .dynamic-table > tbody td {
-  padding: 0.3rem .6rem;
+  padding: 0 .6rem;
   text-align: center;
   white-space: nowrap;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+
+.dynamic-table > thead th {
+  padding: .6rem .6rem;
 }
 
 .dynamic-table > tbody td:first-child {

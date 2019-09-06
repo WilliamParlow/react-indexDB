@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
+        <Navbar/>
         <div className="app-content-wrapper">
           <div className="app-content-container">
             <div className="app-content">

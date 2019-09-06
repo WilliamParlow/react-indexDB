@@ -74,27 +74,31 @@ body {
 }
 
 .calendar-item-data::-webkit-scrollbar,
-.dynamic-table > tbody td::-webkit-scrollbar {
+.dynamic-table > tbody td::-webkit-scrollbar,
+.dynamic-table-wrapper::-webkit-scrollbar {
   width: 6px;
   border-radius: 50px;
   height: 6px;
 }
 
 .calendar-item-data::-webkit-scrollbar-track,
-.dynamic-table > tbody td::-webkit-scrollbar-track {
+.dynamic-table > tbody td::-webkit-scrollbar-track,
+.dynamic-table-wrapper::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 50px;
 }
 
 .calendar-item-data::-webkit-scrollbar-thumb,
-.dynamic-table > tbody td::-webkit-scrollbar-thumb {
+.dynamic-table > tbody td::-webkit-scrollbar-thumb,
+.dynamic-table-wrapper::-webkit-scrollbar-thumb {
   background: rgb(199, 199, 199);
   border-radius: 50px;
   transition: 0.3s ease-in-out;
 }
 
 .calendar-item-data::-webkit-scrollbar-thumb:hover,
-.dynamic-table > tbody td::-webkit-scrollbar-thumb:hover {
+.dynamic-table > tbody td::-webkit-scrollbar-thumb:hover,
+.dynamic-table-wrapper::-webkit-scrollbar-thumb:hover {
   background: rgb(179, 179, 179);
   transition: 0.3s ease-in-out;
 }
